@@ -46,9 +46,10 @@ public class NumberUtilsTests {
 		final int begin = (int)(Math.random()*10);	//Integer.MIN_VALUE + (int)(Math.random()*MAX_INTEGER_RANGE);
 		final int stepSize = 1+(int)(Math.random()*10);	//(int)(Math.random()*10)+1;
 		final int setSize = (int)(Math.random()*100) + 10;	//(int)(Math.random()*(((long)Integer.MAX_VALUE - begin)/setSize-2))+2;
+		assertEquals(begin, NumberUtils.getRandomInteger(begin, 1, stepSize));
 		try {
-			NumberUtils.getRandomInteger(begin, 1, stepSize);
-			fail("setSize should not be equal to or less than 1");
+			NumberUtils.getRandomInteger(begin, 0, stepSize);
+			fail("setSize should not be equal to or less than 0");
 		} catch(Exception e) {
 			log.debug("getRandomInteger");
 		}
