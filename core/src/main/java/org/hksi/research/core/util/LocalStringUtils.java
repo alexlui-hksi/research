@@ -6,7 +6,7 @@ import javax.validation.constraints.NotEmpty;
 import lombok.extern.log4j.Log4j2;
 
 /**
- * 
+ * Common utilities for string operations 
  * 
  * @author Alex Lui
  *
