@@ -29,6 +29,7 @@ public class LocalStringUtils {
 		log.traceEntry("generateRandomString; minLength={}, range={}, charset={}", minLength, range, charset);
 		final StringBuffer sb = new StringBuffer();
 		final int length = range==0?minLength:NumberUtils.getRandomInteger(minLength, range);
+		log.debug("generateRandomString; string lenght={}", length);
 		for(int i=length; i>0; i--) {
 			sb.append(charset.charAt(NumberUtils.getRandomInteger(charset.length())));
 		}
