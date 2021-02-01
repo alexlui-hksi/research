@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1}:%L - %msg%n" />
+		</Console>
+		<Null name="null" />
+	</Appenders>
+	<Loggers>
+		<Logger name="org.hksi.research" level="trace" additivity="false">
+			<appender-ref ref="console" level="trace" />
+		</Logger>
+		<Root level="debug" additivity="false">
+			<AppenderRef ref="console" level="error"/>
+		</Root>
+	</Loggers>
+</Configuration>
